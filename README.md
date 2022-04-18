@@ -1,7 +1,7 @@
 # SCSS_Study
 SCSS 공부
 
-<_main.scss_참조 >
+< _main.scss_ 참조 >
 
 ## 중첩
 
