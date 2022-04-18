@@ -141,16 +141,51 @@ SCSS 공부
 ## 가져오기
 
 ```scss
-
+  @import "./sub.scss", "./sub2.scss";
 ```
 ## 반복문 @each
 
 ```scss
+  $list : orange, royalblue, yellow;
+  $map: (
+      o : orange,
+      r : royalblue,
+      y : yellow
 
+  );
+  @each $c in $list {
+      .box {
+          color: $c;
+      }
+  }
+  @each $K in $map{
+      .box2-#{$K} {
+          color: $K;
+      }
+  }
 ```
 ## 재활용 @content
 
 ```scss
-
+   @mixin top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @content;
+  }
+  .container {
+    width: 100px;
+    height: 100px;
+    @include top-left;
+  }
+  .box {
+    width: 200px;
+    height: 300px;
+    @include top-left {
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+  }
 ```
 
